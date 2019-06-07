@@ -1,3 +1,8 @@
 # ignore files, dirs
 /ignore
 
+# ref.
+# [gitの管理対象から特定のファイル、ディレクトリを削除する]
+# https://qiita.com/ytkt/items/a2afd6be8e4f06c1ea25
+# [[Git] .gitignoreの仕様詳解]
+# https://qiita.com/anqooqie/items/110957797b3d5280c44f
