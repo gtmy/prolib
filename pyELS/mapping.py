@@ -24,7 +24,7 @@ class MappingELS(object):
         self.els = Elasticsearch(host=host, port=port)
         self.json = {"mappings": {}}
 
-    def data_mapping(self):
+    def sample_mapping(self):
         """example mapping
         data用のmappingの作成と登録
         """
@@ -70,9 +70,10 @@ class MappingELS(object):
                     }
                 self.json["mappings"][doc_type]["properties"][cname] = column
 
-    def register(self):
+    def register(self, overwrite=False):
         """indexにmappingを登録する
         """
 
-        self.els.indices.delete(index=self.index, params={"ignore": 404})
+        if overwrite:
+            self.els.indices.delete(index=self.index, params={"ignore": 404})
         self.els.indices.create(index=self.index, body=self.json)
