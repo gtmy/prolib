@@ -1,5 +1,6 @@
 # ignore files, dirs
 /__pycache__
+/ignore
 
 # ref.
 # [gitの管理対象から特定のファイル、ディレクトリを削除する]
